@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda Exclusiva - Lo más vendido, Muñecos BT21 y Adornos Lightstick</title>
+    <title>Node3D - Lo más vendido, Muñecos BT21 y Adornos Lightstick</title>
     <!-- Tailwind CSS for modern styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Inter -->
@@ -68,6 +68,9 @@
         <button onclick="filterCategory('mas-vendido')" id="btn-mas-vendido" class="category-btn px-6 py-2 rounded-xl font-semibold text-sm transition bg-slate-800 text-slate-300 hover:bg-slate-700 whitespace-nowrap">
             <i class="fa-solid fa-fire mr-2"></i> Lo más vendido
         </button>
+        <button onclick="filterCategory('soporte')" id="btn-soporte" class="category-btn px-6 py-2 rounded-xl font-semibold text-sm transition bg-slate-800 text-slate-300 hover:bg-slate-700 whitespace-nowrap">
+            <i class="fa-solid fa-fire mr-2"></i> Soporte
+        </button>
         <button onclick="filterCategory('muneco')" id="btn-muneco" class="category-btn px-6 py-2 rounded-xl font-semibold text-sm transition bg-slate-800 text-slate-300 hover:bg-slate-700 whitespace-nowrap">
             <i class="fa-solid fa-child-reaching mr-2"></i> Muñecos BT21
         </button>
@@ -118,11 +121,11 @@
 <footer class="bg-slate-900 text-slate-300 mt-16 py-10 border-t border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
         <div>
-            <h3 class="text-xl font-bold text-white tracking-tight">Tienda Exclusiva</h3>
+            <h3 class="text-xl font-bold text-white tracking-tight">Node3D</h3>
             <p class="text-sm text-slate-400 mt-1">Los mejores productos y accesorios K-Pop al alcance de un clic con atención directa por WhatsApp.</p>
         </div>
         <div class="text-sm text-slate-500">
-            &copy; 2026 Tienda Exclusiva. Todos los derechos reservados.
+            &copy; Node3D. Todos los derechos reservados.
         </div>
     </div>
 </footer>
@@ -145,68 +148,79 @@
         { id: 11, name: "Muñeco Decorativo Cooky 30 cm", category: "muneco", categoryName: "Muñecos BT21", price: "S./120.00", image: "img/products/muneco/mb-05.jpeg", description: "Incorpora al tierno pero rudo conejito Cooky en tu decoración[cite: 10]. Con sus 30 cm de altura[cite: 10] y un acabado impecable en 3D[cite: 10], es la pieza perfecta para destacar en cualquier estantería[cite: 10]." },
         { id: 12, name: "Muñeco Decorativo Van 30 cm", category: "muneco", categoryName: "Muñecos BT21", price: "S./99.90", image: "img/products/muneco/mb-06.jpeg", description: "Completa tu set de personajes con el fiel guardián de BT21[cite: 11]. Un diseño bicolor moderno de 30 cm[cite: 11] impreso en 3D[cite: 11] que aporta un estilo único y sofisticado a tu cuarto ARMY[cite: 11]." },
 
+        // Soporte
+        { id: 13, name: "Soporte Cooky BT21 Edition", category: "soporte", categoryName: "Soporte", price: "S./25.00", image: "img/products/soporte/sb-01.jpeg", description: "Soporte de alta calidad inspirado en Cooky para darle un toque kawaii y único a tu Bomb ARMY[cite: 50]." },
+        { id: 14, name: "Soporte Chimmy BT21 Edition", category: "soporte", categoryName: "Soporte", price: "S./25.00", image: "img/products/soporte/sb-02.jpeg", description: "Soporte de alta calidad inspirado en Chimmy para exhibir tu Bomb ARMY con estilo[cite: 51]." },
+        { id: 15, name: "Soporte RJ BT21 Edition", category: "soporte", categoryName: "Soporte", price: "S./25.00", image: "img/products/soporte/sb-03.jpeg", description: "Soporte de alta calidad inspirado en RJ, perfecto para completar tu colección ARMY[cite: 52]." },
+        { id: 16, name: "Soporte Tata BT21 Edition", category: "soporte", categoryName: "Soporte", price: "S./25.00", image: "img/products/soporte/sb-04.jpeg", description: "Soporte en forma de corazón inspirado en Tata para darle un toque especial a tu Bomb ARMY[cite: 53]." },
+        { id: 17, name: "Soporte Koya BT21 Edition", category: "soporte", categoryName: "Soporte", price: "S./25.00", image: "img/products/soporte/sb-05.jpeg", description: "Soporte de alta calidad inspirado en Koya, ideal para organizar y decorar tu espacio ARMY[cite: 54]." },
+        { id: 18, name: "Soporte BTS Classic", category: "soporte", categoryName: "Soporte", price: "S./14.90", image: "img/products/soporte/sb-06.jpeg", description: "Soporte clásico de BTS con diseño exclusivo impreso en 3D para tu colección[cite: 55]." },
+        { id: 19, name: "Soporte para Lightstick BTS", category: "soporte", categoryName: "Soporte", price: "S./23.00", image: "img/products/soporte/sb-07.jpeg", description: "Elegante soporte para lightstick diseñado especialmente para exhibir tu Bomb ARMY[cite: 56]." },
+
         // Adornos Lightstick
-        { id: 13, name: "Adorno Ballenita", category: "lightstick", categoryName: "Adornos LightStick", price: "S./29.9", image: "img/products/lightstick/ls-08.jpeg", description: "Tierno adorno de ballenita para darle un toque kawaii y único a tu Bomb ARMY[cite: 1]." },
-        { id: 14, name: "Adorno Gorritos BTS", category: "lightstick", categoryName: "Adornos LightStick", price: "S./39.9", image: "img/products/lightstick/ls-07.jpeg", description: "Adorable adorno de gorritos en dos colores para personalizar tu Bomb ARMY[cite: 2]." },
-        { id: 15, name: "Adorno Cooky", category: "lightstick", categoryName: "Adornos LightStick", price: "S./23.00", image: "img/products/lightstick/ls-01.jpeg", description: "Lindo adorno de Cooky impreso en 3D para acompañar tu Bomb ARMY[cite: 3]." },
-        { id: 16, name: "Adorno Chimmy", category: "lightstick", categoryName: "Adornos LightStick", price: "S./25.00", image: "img/products/lightstick/ls-02.jpeg", description: "Encantador adorno de Chimmy para personalizar y destacar tu Bomb ARMY[cite: 4]." },
-        { id: 17, name: "Adorno Koya", category: "lightstick", categoryName: "Adornos LightStick", price: "S./23.00", image: "img/products/lightstick/ls-03.jpeg", description: "Dulce adorno de Koya diseñado especialmente para tu Bomb ARMY[cite: 5]." },
-        { id: 18, name: "Adorno RJ", category: "lightstick", categoryName: "Adornos LightStick", price: "S./20.00", image: "img/products/lightstick/ls-04.jpeg", description: "Espectacular adorno de RJ para darle un estilo tierno a tu Bomb ARMY[cite: 6]." },
-        { id: 19, name: "Adorno Shooky", category: "lightstick", categoryName: "Adornos LightStick", price: "S./25.00", image: "img/products/lightstick/ls-05.jpeg", description: "Divertido adorno de Shooky ideal para personalizar tu Bomb ARMY[cite: 7]." },
-        { id: 20, name: "Adorno Tata", category: "lightstick", categoryName: "Adornos LightStick", price: "S./25.00", image: "img/products/lightstick/ls-06.jpeg", description: "Hermoso adorno en forma de corazón de Tata para tu Bomb ARMY[cite: 8]." },
+        { id: 20, name: "Adorno Ballenita", category: "lightstick", categoryName: "Adornos LightStick", price: "S./29.9", image: "img/products/lightstick/ls-08.jpeg", description: "Tierno adorno de ballenita para darle un toque kawaii y único a tu Bomb ARMY[cite: 1]." },
+        { id: 21, name: "Adorno Gorritos BTS", category: "lightstick", categoryName: "Adornos LightStick", price: "S./39.9", image: "img/products/lightstick/ls-07.jpeg", description: "Adorable adorno de gorritos en dos colores para personalizar tu Bomb ARMY[cite: 2]." },
+        { id: 22, name: "Adorno Cooky", category: "lightstick", categoryName: "Adornos LightStick", price: "S./23.00", image: "img/products/lightstick/ls-01.jpeg", description: "Lindo adorno de Cooky impreso en 3D para acompañar tu Bomb ARMY[cite: 3]." },
+        { id: 23, name: "Adorno Chimmy", category: "lightstick", categoryName: "Adornos LightStick", price: "S./25.00", image: "img/products/lightstick/ls-02.jpeg", description: "Encantador adorno de Chimmy para personalizar y destacar tu Bomb ARMY[cite: 4]." },
+        { id: 24, name: "Adorno Koya", category: "lightstick", categoryName: "Adornos LightStick", price: "S./23.00", image: "img/products/lightstick/ls-03.jpeg", description: "Dulce adorno de Koya diseñado especialmente para tu Bomb ARMY[cite: 5]." },
+        { id: 25, name: "Adorno RJ", category: "lightstick", categoryName: "Adornos LightStick", price: "S./20.00", image: "img/products/lightstick/ls-04.jpeg", description: "Espectacular adorno de RJ para darle un estilo tierno a tu Bomb ARMY[cite: 6]." },
+        { id: 26, name: "Adorno Shooky", category: "lightstick", categoryName: "Adornos LightStick", price: "S./25.00", image: "img/products/lightstick/ls-05.jpeg", description: "Divertido adorno de Shooky ideal para personalizar tu Bomb ARMY[cite: 7]." },
+        { id: 27, name: "Adorno Mang", category: "lightstick", categoryName: "Adornos LightStick", price: "S./25.00", image: "img/products/lightstick/ls-09.jpeg", description: "Hermoso adorno Mang para tu BOMB Army." },
+        { id: 28, name: "Adorno lightstick", category: "lightstick", categoryName: "Adornos LightStick", price: "S./12.00", image: "img/products/lightstick/ls-10.jpeg", description: "Hermoso adorno para Lightstick para tu Bomb ARMY." },
+        { id: 29, name: "Adorno lightstick", category: "lightstick", categoryName: "Adornos LightStick", price: "S./12.00", image: "img/products/lightstick/ls-11.jpeg", description: "Hermoso adorno para Lightstick para tu Bomb ARMY." },
 
         // Llaveros
-        { id: 21, name: "Llavero Chimmy", category: "llavero", categoryName: "Llaveros", price: "S./4.99", image: "img/products/llaveros/ll-01.jpeg", description: "Llavero exclusivo de colección con diseño de Chimmy, ideal para ARMY[cite: 9]." },
-        { id: 22, name: "Llavero Shooky", category: "llavero", categoryName: "Llaveros", price: "S./4.99", image: "img/products/llaveros/ll-02.jpeg", description: "Llavero exclusivo de colección con diseño de Shooky, ideal para ARMY[cite: 10]." },
-        { id: 23, name: "Llavero RJ", category: "llavero", categoryName: "Llaveros", price: "S./4.99", image: "img/products/llaveros/ll-03.jpeg", description: "Llavero exclusivo de colección con diseño de RJ, ideal para ARMY[cite: 11]." },
-        { id: 24, name: "Llavero Van", category: "llavero", categoryName: "Llaveros", price: "S./4.99", image: "img/products/llaveros/ll-04.jpeg", description: "Llavero exclusivo de colección con diseño de Van, ideal para ARMY[cite: 12]." },
-        { id: 25, name: "Llavero Koya", category: "llavero", categoryName: "Llaveros", price: "S./4.99", image: "img/products/llaveros/ll-05.jpeg", description: "Llavero exclusivo de colección con diseño de Koya, ideal para ARMY[cite: 13]." },
-        { id: 26, name: "Llavero Tata", category: "llavero", categoryName: "Llaveros", price: "S./4.99", image: "img/products/llaveros/ll-06.jpeg", description: "Llavero exclusivo de colección con diseño de Tata, ideal para ARMY[cite: 14]." },
-        { id: 27, name: "Llavero Cooky", category: "llavero", categoryName: "Llaveros", price: "S./4.99", image: "img/products/llaveros/ll-07.jpeg", description: "Llavero exclusivo de colección con diseño de Cooky, ideal para ARMY[cite: 15]." },
-        { id: 28, name: "Llavero Mang", category: "llavero", categoryName: "Llaveros", price: "S./4.99", image: "img/products/llaveros/ll-08.jpeg", description: "Llavero exclusivo de colección con diseño de Mang, ideal para ARMY[cite: 16]." },
+        { id: 30, name: "Llavero Chimmy", category: "llavero", categoryName: "Llaveros", price: "S./4.99", image: "img/products/llaveros/ll-01.jpeg", description: "Llavero exclusivo de colección con diseño de Chimmy, ideal para ARMY[cite: 9]." },
+        { id: 31, name: "Llavero Shooky", category: "llavero", categoryName: "Llaveros", price: "S./4.99", image: "img/products/llaveros/ll-02.jpeg", description: "Llavero exclusivo de colección con diseño de Shooky, ideal para ARMY[cite: 10]." },
+        { id: 32, name: "Llavero RJ", category: "llavero", categoryName: "Llaveros", price: "S./4.99", image: "img/products/llaveros/ll-03.jpeg", description: "Llavero exclusivo de colección con diseño de RJ, ideal para ARMY[cite: 11]." },
+        { id: 33, name: "Llavero Van", category: "llavero", categoryName: "Llaveros", price: "S./4.99", image: "img/products/llaveros/ll-04.jpeg", description: "Llavero exclusivo de colección con diseño de Van, ideal para ARMY[cite: 12]." },
+        { id: 34, name: "Llavero Koya", category: "llavero", categoryName: "Llaveros", price: "S./4.99", image: "img/products/llaveros/ll-05.jpeg", description: "Llavero exclusivo de colección con diseño de Koya, ideal para ARMY[cite: 13]." },
+        { id: 35, name: "Llavero Tata", category: "llavero", categoryName: "Llaveros", price: "S./4.99", image: "img/products/llaveros/ll-06.jpeg", description: "Llavero exclusivo de colección con diseño de Tata, ideal para ARMY[cite: 14]." },
+        { id: 36, name: "Llavero Cooky", category: "llavero", categoryName: "Llaveros", price: "S./4.99", image: "img/products/llaveros/ll-07.jpeg", description: "Llavero exclusivo de colección con diseño de Cooky, ideal para ARMY[cite: 15]." },
+        { id: 37, name: "Llavero Mang", category: "llavero", categoryName: "Llaveros", price: "S./4.99", image: "img/products/llaveros/ll-08.jpeg", description: "Llavero exclusivo de colección con diseño de Mang, ideal para ARMY[cite: 16]." },
 
         // Portavasos
-        { id: 29, name: "Portavasos Vinilo Beige Rosado Claro", category: "portavasos", categoryName: "Portavasos", price: "S./6.00", image: "img/products/portavasos/pb-01.jpeg", description: "Portavasos protector con diseño de vinilo en color beige rosado claro, ideal para darle un toque ARMY a tu espacio[cite: 17]." },
-        { id: 30, name: "Portavasos Vinilo Rosa Medio", category: "portavasos", categoryName: "Portavasos", price: "S./6.00", image: "img/products/portavasos/pb-02.jpeg", description: "Portavasos protector con diseño de vinilo en color rosa medio, ideal para darle un toque ARMY a tu espacio[cite: 18]." },
-        { id: 31, name: "Portavasos Vinilo Rojo", category: "portavasos", categoryName: "Portavasos", price: "S./6.00", image: "img/products/portavasos/pb-03.jpeg", description: "Portavasos protector con diseño de vinilo en color rojo vibrante, ideal para darle un toque ARMY a tu espacio[cite: 19]." },
-        { id: 32, name: "Portavasos Vinilo Marrón", category: "portavasos", categoryName: "Portavasos", price: "S./6.00", image: "img/products/portavasos/pb-04.jpeg", description: "Portavasos protector con diseño de vinilo en tono marrón, ideal para darle un toque ARMY a tu espacio[cite: 20]." },
-        { id: 33, name: "Portavasos Edición Morado", category: "portavasos", categoryName: "Portavasos", price: "S./6.00", image: "img/products/portavasos/pb-05.jpeg", description: "Portavasos protector con diseño de vinilo en edición morado especial, ideal para darle un toque ARMY a tu espacio[cite: 21]." },
-        { id: 34, name: "Portavasos Vinilo Gris", category: "portavasos", categoryName: "Portavasos", price: "S./6.00", image: "img/products/portavasos/pb-06.jpeg", description: "Portavasos protector con diseño de vinilo en color gris elegante, ideal para darle un toque ARMY a tu espacio[cite: 22]." },
-        { id: 35, name: "Portavasos Vinilo Blanco", category: "portavasos", categoryName: "Portavasos", price: "S./6.00", image: "img/products/portavasos/pb-07.jpeg", description: "Portavasos protector con diseño de vinilo en color blanco, ideal para darle un toque ARMY a tu espacio[cite: 23]." },
-        { id: 36, name: "Portavasos Vinilo Fucsia", category: "portavasos", categoryName: "Portavasos", price: "S./6.00", image: "img/products/portavasos/pb-08.jpeg", description: "Portavasos protector con diseño de vinilo en color fucsia, ideal para darle un toque ARMY a tu espacio[cite: 24]." },
+        { id: 38, name: "Portavasos Vinilo Beige Rosado Claro", category: "portavasos", categoryName: "Portavasos", price: "S./6.00", image: "img/products/portavasos/pb-01.jpeg", description: "Portavasos protector con diseño de vinilo en color beige rosado claro, ideal para darle un toque ARMY a tu espacio[cite: 17]." },
+        { id: 39, name: "Portavasos Vinilo Rosa Medio", category: "portavasos", categoryName: "Portavasos", price: "S./6.00", image: "img/products/portavasos/pb-02.jpeg", description: "Portavasos protector con diseño de vinilo en color rosa medio, ideal para darle un toque ARMY a tu espacio[cite: 18]." },
+        { id: 40, name: "Portavasos Vinilo Rojo", category: "portavasos", categoryName: "Portavasos", price: "S./6.00", image: "img/products/portavasos/pb-03.jpeg", description: "Portavasos protector con diseño de vinilo en color rojo vibrante, ideal para darle un toque ARMY a tu espacio[cite: 19]." },
+        { id: 41, name: "Portavasos Vinilo Marrón", category: "portavasos", categoryName: "Portavasos", price: "S./6.00", image: "img/products/portavasos/pb-04.jpeg", description: "Portavasos protector con diseño de vinilo en tono marrón, ideal para darle un toque ARMY a tu espacio[cite: 20]." },
+        { id: 42, name: "Portavasos Edición Morado", category: "portavasos", categoryName: "Portavasos", price: "S./6.00", image: "img/products/portavasos/pb-05.jpeg", description: "Portavasos protector con diseño de vinilo en edición morado especial, ideal para darle un toque ARMY a tu espacio[cite: 21]." },
+        { id: 43, name: "Portavasos Vinilo Gris", category: "portavasos", categoryName: "Portavasos", price: "S./6.00", image: "img/products/portavasos/pb-06.jpeg", description: "Portavasos protector con diseño de vinilo en color gris elegante, ideal para darle un toque ARMY a tu espacio[cite: 22]." },
+        { id: 44, name: "Portavasos Vinilo Blanco", category: "portavasos", categoryName: "Portavasos", price: "S./6.00", image: "img/products/portavasos/pb-07.jpeg", description: "Portavasos protector con diseño de vinilo en color blanco, ideal para darle un toque ARMY a tu espacio[cite: 23]." },
+        { id: 45, name: "Portavasos Vinilo Fucsia", category: "portavasos", categoryName: "Portavasos", price: "S./6.00", image: "img/products/portavasos/pb-08.jpeg", description: "Portavasos protector con diseño de vinilo en color fucsia, ideal para darle un toque ARMY a tu espacio[cite: 24]." },
 
         // Fundas
-        { id: 37, name: "Funda Army Bomb Rosado", category: "fundas", categoryName: "Fundas", price: "S./19.90", image: "img/products/fundas/fb-01.jpeg", description: "Funda de alta calidad impreso en 3D, perfecto para tu escritorio ARMY[cite: 25]." },
-        { id: 38, name: "Funda Army Bomb Amarillo", category: "fundas", categoryName: "Fundas", price: "S./19.90", image: "img/products/fundas/fb-02.jpeg", description: "Funda de alta calidad impreso en 3D, perfecto para tu escritorio ARMY[cite: 26]." },
-        { id: 39, name: "Funda Army Bomb Morado", category: "fundas", categoryName: "Fundas", price: "S./19.90", image: "img/products/fundas/fb-03.jpeg", description: "Funda de alta calidad impreso en 3D, perfecto para tu escritorio ARMY[cite: 27]." },
-        { id: 40, name: "Funda Army Bomb Rojo", category: "fundas", categoryName: "Fundas", price: "S./19.90", image: "img/products/fundas/fb-04.jpeg", description: "Funda de alta calidad impreso en 3D, perfecto para tu escritorio ARMY[cite: 28]." },
-        { id: 41, name: "Funda Army Bomb Blanco", category: "fundas", categoryName: "Fundas", price: "S./19.90", image: "img/products/fundas/fb-05.jpeg", description: "Funda de alta calidad impreso en 3D, perfecto para tu escritorio ARMY[cite: 29]." },
-        { id: 42, name: "Funda Army Bomb Beige", category: "fundas", categoryName: "Fundas", price: "S./19.90", image: "img/products/fundas/fb-06.jpeg", description: "Funda de alta calidad impreso en 3D, perfecto para tu escritorio ARMY[cite: 30]." },
+        { id: 46, name: "Funda Army Bomb Rosado", category: "fundas", categoryName: "Fundas", price: "S./19.90", image: "img/products/fundas/fb-01.jpeg", description: "Funda de alta calidad impreso en 3D, perfecto para tu escritorio ARMY[cite: 25]." },
+        { id: 47, name: "Funda Army Bomb Amarillo", category: "fundas", categoryName: "Fundas", price: "S./19.90", image: "img/products/fundas/fb-02.jpeg", description: "Funda de alta calidad impreso en 3D, perfecto para tu escritorio ARMY[cite: 26]." },
+        { id: 48, name: "Funda Army Bomb Morado", category: "fundas", categoryName: "Fundas", price: "S./19.90", image: "img/products/fundas/fb-03.jpeg", description: "Funda de alta calidad impreso en 3D, perfecto para tu escritorio ARMY[cite: 27]." },
+        { id: 49, name: "Funda Army Bomb Rojo", category: "fundas", categoryName: "Fundas", price: "S./19.90", image: "img/products/fundas/fb-04.jpeg", description: "Funda de alta calidad impreso en 3D, perfecto para tu escritorio ARMY[cite: 28]." },
+        { id: 50, name: "Funda Army Bomb Blanco", category: "fundas", categoryName: "Fundas", price: "S./19.90", image: "img/products/fundas/fb-05.jpeg", description: "Funda de alta calidad impreso en 3D, perfecto para tu escritorio ARMY[cite: 29]." },
+        { id: 51, name: "Funda Army Bomb Beige", category: "fundas", categoryName: "Fundas", price: "S./19.90", image: "img/products/fundas/fb-06.jpeg", description: "Funda de alta calidad impreso en 3D, perfecto para tu escritorio ARMY[cite: 30]." },
 
         // Lentes
-        { id: 43, name: "Bandeja para Lentes Bunny Edition", category: "lentes", categoryName: "Lentes", price: "S./14.90", image: "img/products/lentes/lente-01.jpeg", description: "Adorable bandeja para lentes Bunny Edition con diseño impreso en 3D para organizar tu escritorio con estilo[cite: 37]." },
-        { id: 44, name: "Bandeja para Lentes Koya Edition", category: "lentes", categoryName: "Lentes", price: "S./14.90", image: "img/products/lentes/lente-02.jpeg", description: "Tierna bandeja para lentes Koya Edition que protege y organiza tus accesorios con mucha ternura[cite: 31]." },
-        { id: 45, name: "Bandeja para Lentes Bear Edition", category: "lentes", categoryName: "Lentes", price: "S./14.90", image: "img/products/lentes/lente-03.jpeg", description: "Práctica y resistente bandeja para lentes Bear Edition con diseño exclusivo impreso en 3D[cite: 32]." },
-        { id: 46, name: "Bandeja para Lentes Duck Edition", category: "lentes", categoryName: "Lentes", price: "S./14.90", image: "img/products/lentes/lente-04.jpeg", description: "Divertida bandeja para lentes Duck Edition, ideal para regalar y cuidar tus lentes con estilo[cite: 33]." },
-        { id: 47, name: "Bandeja para Lentes Panda Edition", category: "lentes", categoryName: "Lentes", price: "S./14.90", image: "img/products/lentes/lente-05.jpeg", description: "Encantadora bandeja para lentes Panda Edition diseñada exclusivamente para tu escritorio[cite: 34]." },
-        { id: 48, name: "Bandeja para Lentes Puppy Edition (Gris)", category: "lentes", categoryName: "Lentes", price: "S./14.90", image: "img/products/lentes/lente-06.jpeg", description: "Hermosa bandeja para lentes Puppy Edition con detalles coleccionables y de alta calidad[cite: 35]." },
-        { id: 49, name: "Bandeja para Lentes Puppy Edition (Amarillo)", category: "lentes", categoryName: "Lentes", price: "S./14.90", image: "img/products/lentes/lente-07.jpeg", description: "Simpática bandeja para lentes Puppy Edition en color amarillo para mantener seguros tus accesorios[cite: 36]." },
+        { id: 52, name: "Bandeja para Lentes Bunny Edition", category: "lentes", categoryName: "Lentes", price: "S./14.90", image: "img/products/lentes/lente-01.jpeg", description: "Adorable bandeja para lentes Bunny Edition con diseño impreso en 3D para organizar tu escritorio con estilo[cite: 37]." },
+        { id: 53, name: "Bandeja para Lentes Koya Edition", category: "lentes", categoryName: "Lentes", price: "S./14.90", image: "img/products/lentes/lente-02.jpeg", description: "Tierna bandeja para lentes Koya Edition que protege y organiza tus accesorios con mucha ternura[cite: 31]." },
+        { id: 54, name: "Bandeja para Lentes Bear Edition", category: "lentes", categoryName: "Lentes", price: "S./14.90", image: "img/products/lentes/lente-03.jpeg", description: "Práctica y resistente bandeja para lentes Bear Edition con diseño exclusivo impreso en 3D[cite: 32]." },
+        { id: 55, name: "Bandeja para Lentes Duck Edition", category: "lentes", categoryName: "Lentes", price: "S./14.90", image: "img/products/lentes/lente-04.jpeg", description: "Divertida bandeja para lentes Duck Edition, ideal para regalar y cuidar tus lentes con estilo[cite: 33]." },
+        { id: 56, name: "Bandeja para Lentes Panda Edition", category: "lentes", categoryName: "Lentes", price: "S./14.90", image: "img/products/lentes/lente-05.jpeg", description: "Encantadora bandeja para lentes Panda Edition diseñada exclusivamente para tu escritorio[cite: 34]." },
+        { id: 57, name: "Bandeja para Lentes Puppy Edition (Gris)", category: "lentes", categoryName: "Lentes", price: "S./14.90", image: "img/products/lentes/lente-06.jpeg", description: "Hermosa bandeja para lentes Puppy Edition con detalles coleccionables y de alta calidad[cite: 35]." },
+        { id: 58, name: "Bandeja para Lentes Puppy Edition (Amarillo)", category: "lentes", categoryName: "Lentes", price: "S./14.90", image: "img/products/lentes/lente-07.jpeg", description: "Simpática bandeja para lentes Puppy Edition en color amarillo para mantener seguros tus accesorios[cite: 36]." },
 
         // Letras
-        { id: 50, name: "Letrero RM", category: "letras", categoryName: "Letras", price: "S./39.90", image: "img/products/letras/letra-01.jpeg", description: "Letras decorativas personalizadas edición Namjoon, perfectas para darle un toque único a tu escritorio ARMY[cite: 38]." },
-        { id: 51, name: "Letrero Jin", category: "letras", categoryName: "Letras", price: "S./42.00", image: "img/products/letras/letra-02.jpeg", description: "Letras decorativas personalizadas edición Seokjin, perfectas para darle un toque único a tu escritorio ARMY[cite: 39]." },
-        { id: 52, name: "Letrero Suga", category: "letras", categoryName: "Letras", price: "S./42.00", image: "img/products/letras/letra-03.jpeg", description: "Letras decorativas personalizadas edición Yoongi, perfectas para darle un toque único a tu escritorio ARMY[cite: 40]." },
-        { id: 53, name: "Letrero Jimin", category: "letras", categoryName: "Letras", price: "S./45.00", image: "img/products/letras/letra-04.jpeg", description: "Letras decorativas personalizadas edición Jimin, perfectas para darle un toque único a tu escritorio ARMY[cite: 41]." },
-        { id: 54, name: "Letrero JK", category: "letras", categoryName: "Letras", price: "S./39.90", image: "img/products/letras/letra-05.jpeg", description: "Letras decorativas personalizadas edición Jungkook, perfectas para darle un toque único a tu escritorio ARMY[cite: 42]." },
-        { id: 55, name: "Letrero V", category: "letras", categoryName: "Letras", price: "S./35.00", image: "img/products/letras/letra-06.jpeg", description: "Letras decorativas personalizadas edición Taehyung, perfectas para darle un toque único a tu escritorio ARMY[cite: 43]." },
-        { id: 56, name: "Letrero Hope", category: "letras", categoryName: "Letras", price: "S./42.00", image: "img/products/letras/letra-07.jpeg", description: "Letras decorativas personalizadas edición Hoseok, perfectas para darle un toque único a tu escritorio ARMY[cite: 44]." },
+        { id: 59, name: "Letrero RM", category: "letras", categoryName: "Letras", price: "S./39.90", image: "img/products/letras/letra-01.jpeg", description: "Letras decorativas personalizadas edición Namjoon, perfectas para darle un toque único a tu escritorio ARMY[cite: 38]." },
+        { id: 60, name: "Letrero Jin", category: "letras", categoryName: "Letras", price: "S./42.00", image: "img/products/letras/letra-02.jpeg", description: "Letras decorativas personalizadas edición Seokjin, perfectas para darle un toque único a tu escritorio ARMY[cite: 39]." },
+        { id: 61, name: "Letrero Suga", category: "letras", categoryName: "Letras", price: "S./42.00", image: "img/products/letras/letra-03.jpeg", description: "Letras decorativas personalizadas edición Yoongi, perfectas para darle un toque único a tu escritorio ARMY[cite: 40]." },
+        { id: 62, name: "Letrero Jimin", category: "letras", categoryName: "Letras", price: "S./45.00", image: "img/products/letras/letra-04.jpeg", description: "Letras decorativas personalizadas edición Jimin, perfectas para darle un toque único a tu escritorio ARMY[cite: 41]." },
+        { id: 63, name: "Letrero JK", category: "letras", categoryName: "Letras", price: "S./39.90", image: "img/products/letras/letra-05.jpeg", description: "Letras decorativas personalizadas edición Jungkook, perfectas para darle un toque único a tu escritorio ARMY[cite: 42]." },
+        { id: 64, name: "Letrero V", category: "letras", categoryName: "Letras", price: "S./35.00", image: "img/products/letras/letra-06.jpeg", description: "Letras decorativas personalizadas edición Taehyung, perfectas para darle un toque único a tu escritorio ARMY[cite: 43]." },
+        { id: 65, name: "Letrero Hope", category: "letras", categoryName: "Letras", price: "S./42.00", image: "img/products/letras/letra-07.jpeg", description: "Letras decorativas personalizadas edición Hoseok, perfectas para darle un toque único a tu escritorio ARMY[cite: 44]." },
 
         // Abrelatas
-        { id: 57, name: "Abrelatas Chimmy", category: "abrelatas", categoryName: "Abrelatas", price: "S./5.00", image: "img/products/abrelatas/ab-01.jpeg", description: "Prático e coleccionable abrelatas edición Chimmy, impreso en 3D y muy fácil de usar[cite: 45]." },
-        { id: 58, name: "Abrelatas RJ", category: "abrelatas", categoryName: "Abrelatas", price: "S./5.00", image: "img/products/abrelatas/ab-02.jpeg", description: "Prático e coleccionable abrelatas edición RJ, impreso en 3D y muy fácil de usar[cite: 46]." },
-        { id: 59, name: "Abrelatas Mang", category: "abrelatas", categoryName: "Abrelatas", price: "S./5.00", image: "img/products/abrelatas/ab-03.jpeg", description: "Prático e coleccionable abrelatas edición Mang, impreso en 3D y muy fácil de usar[cite: 47]." },
-        { id: 60, name: "Abrelatas Tata", category: "abrelatas", categoryName: "Abrelatas", price: "S./5.00", image: "img/products/abrelatas/ab-04.jpeg", description: "Prático e coleccionable abrelatas edición Tata, impreso en 3D y muy fácil de usar[cite: 48]." },
-        { id: 61, name: "Abrelatas Shooky", category: "abrelatas", categoryName: "Abrelatas", price: "S./5.00", image: "img/products/abrelatas/ab-05.jpeg", description: "Prático e coleccionable abrelatas edición Shooky, impreso en 3D y muy fácil de usar[cite: 49]." }
+        { id: 66, name: "Abrelatas Chimmy", category: "abrelatas", categoryName: "Abrelatas", price: "S./5.00", image: "img/products/abrelatas/ab-01.jpeg", description: "Prático e coleccionable abrelatas edición Chimmy, impreso en 3D y muy fácil de usar[cite: 45]." },
+        { id: 67, name: "Abrelatas RJ", category: "abrelatas", categoryName: "Abrelatas", price: "S./5.00", image: "img/products/abrelatas/ab-02.jpeg", description: "Prático e coleccionable abrelatas edición RJ, impreso en 3D y muy fácil de usar[cite: 46]." },
+        { id: 68, name: "Abrelatas Mang", category: "abrelatas", categoryName: "Abrelatas", price: "S./5.00", image: "img/products/abrelatas/ab-03.jpeg", description: "Prático e coleccionable abrelatas edición Mang, impreso en 3D y muy fácil de usar[cite: 47]." },
+        { id: 69, name: "Abrelatas Tata", category: "abrelatas", categoryName: "Abrelatas", price: "S./5.00", image: "img/products/abrelatas/ab-04.jpeg", description: "Prático e coleccionable abrelatas edición Tata, impreso en 3D y muy fácil de usar[cite: 48]." },
+        { id: 70, name: "Abrelatas Shooky", category: "abrelatas", categoryName: "Abrelatas", price: "S./5.00", image: "img/products/abrelatas/ab-05.jpeg", description: "Prático e coleccionable abrelatas edición Shooky, impreso en 3D y muy fácil de usar[cite: 49]." }
     ];
 
     let currentFilter = 'all';
@@ -246,6 +260,7 @@
             const categories = [
                 { key: 'mas-vendido', name: 'Lo más vendido', icon: 'fa-fire' },
                 { key: 'muneco', name: 'Muñecos BT21', icon: 'fa-child-reaching' },
+                { key: 'soporte', name: 'Soporte', icon: 'fa-child-reaching' },
                 { key: 'lightstick', name: 'Adornos LightStick', icon: 'fa-wand-magic-sparkles' },
                 { key: 'llavero', name: 'Llaveros', icon: 'fa-key' },
                 { key: 'portavasos', name: 'Portavasos', icon: 'fa-mug-saucer' },
@@ -336,6 +351,7 @@
     function openModal(productId) {
         const product = products.find(p => p.id === productId);
         if (!product) return;
+        document.body.style.overflowY = 'hidden';
 
         const modalContent = document.getElementById('modalContent');
         const message = encodeURIComponent(`Hola, me interesa este producto: *${product.name}* (${product.price}). ¿Está disponible?`);
@@ -368,7 +384,15 @@
 
     function closeModal() {
         document.getElementById('productModal').classList.add('hidden');
+        document.body.style.overflowY = 'auto';
     }
+</script>
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "yklkt9sg81");
 </script>
 </body>
 </html>
